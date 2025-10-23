@@ -31,7 +31,3 @@ It allows users to explore online courses, meet mentors, and read testimonials â
 | **Tailwind CSS** | Utility-first responsive styling |
 | **JavaScript (ES6)** | Carousel and animations |
 | **Font Awesome / Icons** | For social & UI icons |
-
----
-
-## ðŸ“‚ Folder Structure
