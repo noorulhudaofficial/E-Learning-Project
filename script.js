@@ -57,3 +57,34 @@ function mentorAutoScroll() {
 }
 
 mentorAutoScroll();
+
+
+
+
+const testimonialCarousel = document.getElementById("testimonialCarousel");
+const testimonialDots = document.querySelectorAll("#testimonialDots div");
+let testimonialScroll = 0;
+let testimonialDirection = 1;
+
+function autoScrollTestimonials() {
+  if (!testimonialCarousel) return;
+  const maxScroll = testimonialCarousel.scrollWidth - testimonialCarousel.clientWidth;
+
+  testimonialScroll += testimonialDirection * 1.5;
+  testimonialCarousel.scrollLeft = testimonialScroll;
+
+  // Update active dot
+  const totalDots = testimonialDots.length;
+  const activeIndex = Math.round((testimonialScroll / maxScroll) * (totalDots - 1));
+  testimonialDots.forEach((dot, i) => {
+    dot.classList.toggle("dot-active", i === activeIndex);
+  });
+
+  if (testimonialScroll >= maxScroll || testimonialScroll <= 0) {
+    testimonialDirection *= -1;
+  }
+
+  requestAnimationFrame(autoScrollTestimonials);
+}
+
+autoScrollTestimonials();

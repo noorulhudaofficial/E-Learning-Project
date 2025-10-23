@@ -103,3 +103,27 @@
   transform: scale(1.05);
 }
 
+
+
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hover animation */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Active dot */
+.dot-active {
+  background-color: #4f46e5 !important; /* Indigo */
+}
