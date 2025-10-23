@@ -103,8 +103,8 @@
     </div>
   </section>
 
-  <!-- Popular Courses Section -->
-<section class="px-6 lg:px-16 py-16 bg-[#f8fbff]">
+ <!-- Popular Courses Section (Auto Carousel) -->
+<section class="px-6 lg:px-16 py-16 bg-[#f8fbff] overflow-hidden">
   <div class="flex justify-between items-center mb-10">
     <h2 class="text-3xl font-extrabold text-gray-800">Popular courses.</h2>
     <a href="#" class="text-indigo-600 font-medium hover:underline">
@@ -112,79 +112,83 @@
     </a>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Card 1 -->
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative">
-      <img src="programing.png" alt="Course 1" class="rounded-xl mb-4">
-      <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</div>
-      <h3 class="text-lg font-semibold">Web Development Coures</h3>
-      <p class="text-gray-500 text-sm mt-1">More Information</p>
-
-      <div class="flex justify-between items-center mt-3">
-        <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
-          5 <span>⭐</span>
-        </p>
-        <p class="font-bold text-gray-700">$20</p>
+  <!-- Carousel Container -->
+  <div class="relative">
+    <div id="courseCarousel" class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+      <!-- Card 1 -->
+      <div class="carousel-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative snap-center min-w-[300px] sm:min-w-[340px] lg:min-w-[360px]">
+        <img src="programing.png" alt="Course 1" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</div>
+        <h3 class="text-lg font-semibold">Web Development Course</h3>
+        <p class="text-gray-500 text-sm mt-1">More Information</p>
+        <div class="flex justify-between items-center mt-3">
+          <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
+            5 <span>⭐</span>
+          </p>
+          <p class="font-bold text-gray-700">$20</p>
+        </div>
+        <hr class="my-3">
+        <div class="flex justify-between text-gray-500 text-sm">
+          <p>📘 12 classes</p>
+          <p>👥 150 students</p>
+        </div>
       </div>
 
-      <hr class="my-3">
-      <div class="flex justify-between text-gray-500 text-sm">
-        <p class="flex items-center gap-2">
-          📘 12 classes
-        </p>
-        <p class="flex items-center gap-2">
-          👥 150 students
-        </p>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative">
-      <img src="gfx.png" alt="Course 2" class="rounded-xl mb-4">
-      <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</div>
-      <h3 class="text-lg font-semibold">Graphics Designing Coures</h3>
-      <p class="text-gray-500 text-sm mt-1">More Information</p>
-
-      <div class="flex justify-between items-center mt-3">
-        <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
-          4.2 <span>⭐⭐⭐⭐</span>
-        </p>
-        <p class="font-bold text-gray-700">$20</p>
+      <!-- Card 2 -->
+      <div class="carousel-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative snap-center min-w-[300px] sm:min-w-[340px] lg:min-w-[360px]">
+        <img src="gfx.png" alt="Course 2" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</div>
+        <h3 class="text-lg font-semibold">Graphics Designing Course</h3>
+        <p class="text-gray-500 text-sm mt-1">More Information</p>
+        <div class="flex justify-between items-center mt-3">
+          <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
+            4.2 <span>⭐⭐⭐⭐</span>
+          </p>
+          <p class="font-bold text-gray-700">$20</p>
+        </div>
+        <hr class="my-3">
+        <div class="flex justify-between text-gray-500 text-sm">
+          <p>📘 12 classes</p>
+          <p>👥 150 students</p>
+        </div>
       </div>
 
-      <hr class="my-3">
-      <div class="flex justify-between text-gray-500 text-sm">
-        <p class="flex items-center gap-2">
-          📘 12 classes
-        </p>
-        <p class="flex items-center gap-2">
-          👥 150 students
-        </p>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative">
-      <img src="marketing.png" alt="Course 3" class="rounded-xl mb-4">
-      <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</div>
-      <h3 class="text-lg font-semibold">Digital Marketig Coures</h3>
-      <p class="text-gray-500 text-sm mt-1">More Information</p>
-
-      <div class="flex justify-between items-center mt-3">
-        <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
-          4.4 <span>⭐⭐⭐⭐</span>
-        </p>
-        <p class="font-bold text-gray-700">$20</p>
+      <!-- Card 3 -->
+      <div class="carousel-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative snap-center min-w-[300px] sm:min-w-[340px] lg:min-w-[360px]">
+        <img src="marketing.png" alt="Course 3" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">BEST SELLER</div>
+        <h3 class="text-lg font-semibold">Digital Marketing Course</h3>
+        <p class="text-gray-500 text-sm mt-1">More Information</p>
+        <div class="flex justify-between items-center mt-3">
+          <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
+            4.4 <span>⭐⭐⭐⭐</span>
+          </p>
+          <p class="font-bold text-gray-700">$20</p>
+        </div>
+        <hr class="my-3">
+        <div class="flex justify-between text-gray-500 text-sm">
+          <p>📘 12 classes</p>
+          <p>👥 150 students</p>
+        </div>
       </div>
 
-      <hr class="my-3">
-      <div class="flex justify-between text-gray-500 text-sm">
-        <p class="flex items-center gap-2">
-          📘 12 classes
-        </p>
-        <p class="flex items-center gap-2">
-          👥 150 students
-        </p>
+      <!-- Card 4 -->
+      <div class="carousel-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition p-4 relative snap-center min-w-[300px] sm:min-w-[340px] lg:min-w-[360px]">
+        <img src="uiux.png" alt="Course 4" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <div class="absolute top-4 right-4 bg-indigo-700 text-white text-xs font-bold px-3 py-1 rounded-full">TRENDING</div>
+        <h3 class="text-lg font-semibold">UI/UX Designing Course</h3>
+        <p class="text-gray-500 text-sm mt-1">More Information</p>
+        <div class="flex justify-between items-center mt-3">
+          <p class="text-yellow-500 font-semibold flex items-center gap-1 text-sm">
+            4.8 <span>⭐⭐⭐⭐⭐</span>
+          </p>
+          <p class="font-bold text-gray-700">$25</p>
+        </div>
+        <hr class="my-3">
+        <div class="flex justify-between text-gray-500 text-sm">
+          <p>📘 15 classes</p>
+          <p>👥 180 students</p>
+        </div>
       </div>
     </div>
   </div>

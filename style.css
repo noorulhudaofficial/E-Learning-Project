@@ -64,17 +64,22 @@
   border-radius: 4px;
 }
 
-
-
-
-/* Hover lift effect for course cards */
-.card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
+/* Hide scrollbar for carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Make images scale slightly on hover */
-.card img:hover {
+/* Hover lift effect */
+.carousel-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+.carousel-card img:hover {
   transform: scale(1.05);
   transition: transform 0.4s ease;
 }
+
