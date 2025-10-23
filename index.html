@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-learning Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#f8fbff] font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 lg:px-16 py-4 bg-white shadow-sm">
+    <div class="flex items-center space-x-2">
+      <h1 class="text-2xl font-extrabold text-gray-800">E-learning<span class="text-indigo-600">.</span></h1>
+    </div>
+
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a href="#" class="active-link">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Mentor</a>
+      <a href="#">Group</a>
+      <a href="#">Testimonial</a>
+      <a href="#">Docs</a>
+    </nav>
+
+    <div class="hidden md:flex space-x-3">
+      <button class="btn-primary">Sign In</button>
+      <button class="btn-secondary">Sign Up</button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-3 space-y-2 shadow-md">
+    <a href="#" class="block">Home</a>
+    <a href="#" class="block">Courses</a>
+    <a href="#" class="block">Mentor</a>
+    <a href="#" class="block">Group</a>
+    <a href="#" class="block">Testimonial</a>
+    <a href="#" class="block">Docs</a>
+    <div class="flex space-x-3 pt-2">
+      <button class="btn-primary w-1/2">Sign In</button>
+      <button class="btn-secondary w-1/2">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse lg:flex-row justify-between items-center px-6 lg:px-16 py-10 lg:py-20">
+    <!-- Left Text -->
+    <div class="max-w-xl space-y-6">
+      <p class="text-green-600 font-semibold">✔️ Get 30% off on first enroll</p>
+      <h2 class="text-4xl lg:text-5xl font-extrabold leading-snug">
+        Advance your <br />
+        engineering skills with us.
+      </h2>
+      <p class="text-gray-600">
+        Build skills with our courses and mentor from world-class companies.
+      </p>
+
+      <!-- Search bar -->
+      <div class="search-box">
+        <input type="text" placeholder="Search courses..." class="search-input" />
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- Features -->
+      <div class="flex flex-wrap gap-6 mt-6 text-sm text-gray-700">
+        <p class="feature-item">✔️ Flexible</p>
+        <p class="feature-item">✔️ Learning path</p>
+        <p class="feature-item">✔️ Community</p>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="relative mt-10 lg:mt-0">
+      <div class="absolute -top-6 right-10 bg-white shadow-lg rounded-xl px-4 py-2">
+        <p class="text-xs text-gray-500">No of students</p>
+        <div class="flex gap-1 mt-1">
+          <div class="bar h-5 bg-indigo-600"></div>
+          <div class="bar h-7 bg-green-500"></div>
+          <div class="bar h-4 bg-yellow-400"></div>
+        </div>
+      </div>
+
+      <img src="./stud.png"
+           alt="Student"
+           class="w-[280px] md:w-[380px] lg:w-[420px] mx-auto rounded-2xl shadow-lg" />
+
+      <div class="absolute bottom-6 left-0 bg-white shadow-md rounded-lg px-4 py-2 flex items-center space-x-2">
+        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg">📘</div>
+        <p class="text-sm font-medium">50+<br><span class="text-gray-500 text-xs">Available courses</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    © 2025 E-learning. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
