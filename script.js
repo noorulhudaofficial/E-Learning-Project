@@ -33,3 +33,27 @@ function autoScroll() {
 
 // Start animation
 autoScroll();
+
+
+
+
+// Auto scroll mentors
+const mentorCarousel = document.getElementById("mentorCarousel");
+let mentorScroll = 0;
+let mentorDirection = 1;
+
+function mentorAutoScroll() {
+  if (!mentorCarousel) return;
+  const maxScroll = mentorCarousel.scrollWidth - mentorCarousel.clientWidth;
+
+  mentorScroll += mentorDirection * 1.5; // speed
+  mentorCarousel.scrollLeft = mentorScroll;
+
+  if (mentorScroll >= maxScroll || mentorScroll <= 0) {
+    mentorDirection *= -1;
+  }
+
+  requestAnimationFrame(mentorAutoScroll);
+}
+
+mentorAutoScroll();
